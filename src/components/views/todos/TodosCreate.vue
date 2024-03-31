@@ -16,7 +16,7 @@ const createdTodos = computed(() => cookies.get("created-todos"));
 
 const isFetching = ref(false);
 
-const { values, validate } = useForm({
+const { values, validate, resetForm } = useForm({
   validationSchema: createTodoSchema,
 });
 async function createTodo() {
@@ -39,6 +39,7 @@ async function createTodo() {
 
   emit("fetch-todos");
   isFetching.value = false;
+  resetForm();
 }
 </script>
 
