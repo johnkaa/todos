@@ -1,0 +1,50 @@
+.base-select {
+  position: relative;
+  width: 100%;
+
+  &__wrapper {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+
+    &_disabled {
+      opacity: .7;
+      pointer-events: none;
+    }
+  }
+
+  &__wrapper, &__options {
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__options {
+    position: absolute;
+    top: 105%;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+    pointer-events: none;
+    transition: opacity .3s, transform .3s;
+    z-index: 10;
+
+    &_shown {
+      pointer-events: auto;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__option {
+    padding: 4px;
+    cursor: pointer;
+    transition: background-color .3s;
+    border-radius: 5px;
+    
+    &:hover {
+      background-color: #c8c8c8;
+    }
+  }
+}

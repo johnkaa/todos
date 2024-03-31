@@ -1,0 +1,11 @@
+.todos-filters {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  align-items: flex-end;
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}

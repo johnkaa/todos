@@ -1,0 +1,23 @@
+.todo-card {
+  background-color: #c58a01;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_completed {
+    background-color: #196219;
+  }
+
+  &__ids {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  &__button {
+    margin-top: 12px;
+  }
+}

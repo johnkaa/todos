@@ -1,0 +1,29 @@
+@import "reset-css";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #545454;
+  color: #fff;
+}

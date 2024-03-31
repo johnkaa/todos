@@ -1,0 +1,19 @@
+.base-button {
+  color: #fff;
+  background-color: #519945;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: darken(#519945, 5%);
+  }
+
+  &:disabled {
+    opacity: .7;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,26 @@
+.base-input {
+  &__field {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+
+    &_disabled {
+      opacity: .7;
+      pointer-events: none;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__error {
+    color: #c30404;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
