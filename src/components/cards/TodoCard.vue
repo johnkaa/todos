@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineEmits, defineProps, ref } from "vue";
+import { defineEmits, defineProps } from "vue";
 import ITodo from "@/pkg/interfaces/todo";
 import BaseButton from "@/components/base/BaseButton.vue";
 interface Props {
