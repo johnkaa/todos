@@ -45,23 +45,24 @@ export default {
 
       let filteredTodos = [...data, ...createdTodos];
 
-      //filter by userId
-      if (options && options.userId) {
-        filteredTodos = filteredTodos.filter(
-          (todo: ITodo) => todo.userId == options.userId!.value
-        );
-      }
-
       //filter by favorites
       if (options?.status?.value === "favorites") {
         const favoritesTodos = localStorage.getItem("favorites");
-
         if (favoritesTodos) {
           const favoritesTodosArray = JSON.parse(favoritesTodos);
           filteredTodos = filteredTodos.filter((todo: ITodo) =>
             favoritesTodosArray.includes(todo.id)
           );
+        } else {
+          filteredTodos = [];
         }
+      }
+
+      //filter by userId
+      if (options && options.userId) {
+        filteredTodos = filteredTodos.filter(
+          (todo: ITodo) => todo.userId == options.userId!.value
+        );
       }
 
       //search by title
